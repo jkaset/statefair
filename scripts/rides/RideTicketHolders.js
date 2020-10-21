@@ -2,8 +2,9 @@ const contentTarget = document.querySelector(".rides")
 const eventHub = document.querySelector("#state-fair")
 
 export const RideTicketHolders = () => {
-    eventHub.addEventListener("rideTicketPurchased", event => { const rideColor = event.detail.clickedButton
-        contentTarget.classList.add(rideColor)
+    eventHub.addEventListener("rideTicketPurchased", event => { 
+        // const rideColor = event.detail.clickedButton
+        // contentTarget.classList.add(rideColor)
         contentTarget.innerHTML += `
             <div class="person rider">
             </div>

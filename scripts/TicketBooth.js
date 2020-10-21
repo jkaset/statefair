@@ -23,6 +23,17 @@ eventHub.addEventListener("click", customEvent => {
         eventHub.dispatchEvent(foodEvent) 
         console.log(foodEvent)
     }
+
+    else if (idOfClicked === "gameTicket") {
+        const gameEvent = new CustomEvent
+        ("gameTicketPurchased", {
+            detail: {
+                clickedButton: "gameTicket"
+            }
+        })
+        eventHub.dispatchEvent(gameEvent)
+        console.log(gameEvent)
+    }
 })
 
 export const TicketBooth = () => {
