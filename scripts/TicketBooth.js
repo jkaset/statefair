@@ -7,7 +7,7 @@ eventHub.addEventListener("click", customEvent => {
     if (idOfClicked === "rideTicket") {
         const rideEvent = new CustomEvent("rideTicketPurchased", {
             detail: {
-                clickedButton: "ride"
+                clickedButton: "rideTicket"
             }
             
         })

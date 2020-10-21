@@ -2,3 +2,6 @@
 
 import {TicketBooth} from "./TicketBooth.js"
 TicketBooth()
+
+import {RideTicketHolders} from "./rides/RideTicketHolders.js"
+RideTicketHolders()
