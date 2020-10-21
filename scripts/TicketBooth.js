@@ -5,8 +5,14 @@ eventHub.addEventListener("click", customEvent => {
     const idOfClicked = customEvent.target.id
 
     if (idOfClicked === "rideTicket") {
-        const rideEvent = new CustomEvent("rideTicketPurchased")
-        eventHub.dispatchEvent(rideEvent)
+        const rideEvent = new CustomEvent("rideTicketPurchased", {
+            detail: {
+                clickedButton: "ride"
+            }
+            
+        })
+        eventHub.dispatchEvent(rideEvent) 
+        console.log(rideEvent)      
     }
 })
 
@@ -17,4 +23,5 @@ export const TicketBooth = () => {
         </div>
     `
 }
+
 
