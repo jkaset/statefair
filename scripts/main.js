@@ -8,3 +8,6 @@ RideTicketHolders()
 
 import {FoodTicketHolders} from "./food/FoodTicketHolder.js"
 FoodTicketHolders()
+
+import {GameTicketHolders} from "./games/GameTicketHolder.js"
+GameTicketHolders()
