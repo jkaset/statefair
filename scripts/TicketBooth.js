@@ -43,6 +43,16 @@ eventHub.addEventListener("click", customEvent => {
         eventHub.dispatchEvent(sideshowEvent)
         console.log(sideshowEvent)
     }
+    else if (idOfClicked === "fullPackageTicket") {
+        const fullPackageEvent = new CustomEvent
+        ("fullPackageTicketPurchased", {
+            detail: {
+                clickedButton: "fullPackageTicket"
+            }
+        })
+        eventHub.dispatchEvent(fullPackageEvent)
+        console.log(fullPackageEvent)
+    }
 })
 
 export const TicketBooth = () => {
@@ -52,6 +62,7 @@ export const TicketBooth = () => {
             <button id="foodTicket">Food Ticket</button>
             <button id="gameTicket">Game Ticket</button>
             <button id="sideshowTicket">Sideshow Ticket</button>
+            <button id="fullPackageTicket">Full Package Ticket</button>
             
         </div>
     `
